@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org"
+      xmlns:sec="http://www.thymeleaf.org/thymeleaf-extras-springsecurity3">
+<head>
+    <title>Upute korištenja</title>
+</head>
+<body>
+    <h2>Upute korištenja</h2>
+
+    <p>Funkcionalnost se može provjeriti direktnim postavljanjem zahtjeva, na primjer u Postman aplikaciji.</p>
+
+    <p>
+        Lista akcija sa pridruženim adresama:
+    </p>
+    <ol>
+        <li>Otvaranje accounta: POST zahtjev na /account sa tijelom(JSON) sljedećeg oblika.
+            { accountId : "myAccountId" }
+        </li>
+        <li>Prikaz svih računa: GET zahtjev na /all. Ovoga ne bi trebalo biti ovdje, ali sam ostavio zbog lakše provjere.
+        </li>
+        <li>Registracija URL-a: POST zahtjev na /register sa tijelom(JSON) sljedećeg oblika.
+            { url : "www.someurl.com", 	redirectType : 302 }
+            Polje "redirectType" nije obavezno.
+            Za registraciju je potrebna autentifikacija, to se u Postmanu može postaviti kao header 'BasicAuth' s imenom i lozinkom stvorenog računa.
+        </li>
+        <li>Dohvat statistike: GET zahtjev na /statistic/{accountId}
+            Za registraciju je potrebna autentifikacija, to se u Postmanu može postaviti kao header 'BasicAuth' s imenom i lozinkom stvorenog računa.
+        </li>
+        <li>Redirekcija: GET zahtjev na /{accountId}/{shortUrl}
+            Jednom kad je stvoren skraćeni URL, stvarnom URL-u se može pristupiti preko navedenog URI-a, gdje je accountId, ID onog tko je stvorio
+            skraćeni URL, a shortUrl generirani skraćeni URL.
+        </li>
+    </ol>
+
+</body>
+</html>
