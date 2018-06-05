@@ -9,17 +9,6 @@ create table statistic (id bigint not null, account_id varchar(255), counter int
 create table url_mapping (id bigint not null, access_counter integer not null, redirect_type integer not null, short_url varchar(255), url varchar(255), primary key (id))
 alter table statistic add constraint UKm86x0bmjin4q1yoepy293wblw unique (account_id, short_url)
 alter table url_mapping add constraint UK4ko4wsgknpxotxwvv5y3lwd8g unique (short_url)
-INSERT INTO ACCOUNT VALUES('usr','A95U9nRx','aced0005757200135b4c6a6176612e6c616e672e537472696e673badd256e7e91d7b4702000078700000000174000455534552')
-COMMIT
-INSERT INTO URL_MAPPING VALUES(1,0,302,'v84JsJ','https://stackoverflow.com/questions/3126769/uniqueconstraint-annotation-in-java')
-ALTER SEQUENCE PUBLIC.HIBERNATE_SEQUENCE RESTART WITH 2
-COMMIT
-INSERT INTO STATISTIC VALUES(2,'usr',1,'v84JsJ')
-ALTER SEQUENCE PUBLIC.HIBERNATE_SEQUENCE RESTART WITH 3
-COMMIT
-DELETE FROM STATISTIC WHERE ID=2
-INSERT INTO STATISTIC VALUES(2,'usr',2,'v84JsJ')
-COMMIT
 drop table account if exists
 drop table statistic if exists
 drop table url_mapping if exists
