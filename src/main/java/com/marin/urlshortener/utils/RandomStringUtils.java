@@ -1,4 +1,4 @@
-package com.marin.urlshortener.service;
+package com.marin.urlshortener.utils;
 
 import java.util.Random;
 

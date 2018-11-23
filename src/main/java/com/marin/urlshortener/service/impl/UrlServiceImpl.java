@@ -1,10 +1,12 @@
-package com.marin.urlshortener.service;
+package com.marin.urlshortener.service.impl;
 
 import com.marin.urlshortener.dao.StatisticsRepository;
 import com.marin.urlshortener.dao.UrlRepository;
 import com.marin.urlshortener.model.Statistic;
 import com.marin.urlshortener.model.Url;
 import com.marin.urlshortener.model.UrlMapping;
+import com.marin.urlshortener.utils.RandomStringUtils;
+import com.marin.urlshortener.service.UrlService;
 import com.marin.urlshortener.web.response.UrlResponse;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;

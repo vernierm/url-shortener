@@ -1,4 +1,4 @@
-package com.marin.urlshortener.service;
+package com.marin.urlshortener.service.impl;
 
 import com.marin.urlshortener.dao.AccountRepository;
 import com.marin.urlshortener.model.Account;

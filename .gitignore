@@ -1,15 +1,7 @@
-/target/
+### MAVEN ###
+/target
+mvn*
 !.mvn/wrapper/maven-wrapper.jar
-!/target/url-shortener-0.0.1-SNAPSHOT.jar
-
-### STS ###
-.apt_generated
-.classpath
-.factorypath
-.project
-.settings
-.springBeans
-.sts4-cache
 
 ### IntelliJ IDEA ###
 .idea
@@ -17,10 +9,5 @@
 *.iml
 *.ipr
 
-### NetBeans ###
-/nbproject/private/
-/build/
-/nbbuild/
-/dist/
-/nbdist/
-/.nb-gradle/
+### DB ###
+*.database.*

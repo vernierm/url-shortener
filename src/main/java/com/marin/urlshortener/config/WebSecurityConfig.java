@@ -1,6 +1,6 @@
 package com.marin.urlshortener.config;
 
-import com.marin.urlshortener.service.AccountDetailsServiceImpl;
+import com.marin.urlshortener.service.impl.AccountDetailsServiceImpl;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.security.config.annotation.web.builders.HttpSecurity;
